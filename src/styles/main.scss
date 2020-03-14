@@ -1,0 +1,30 @@
+@import "variables";
+@import "template";
+@import "header";
+@import "banner";
+@import "about";
+@import "portfolio";
+@import "clients";
+@import "testimonials";
+@import "subscribe";
+@import "footer";
+
+.hm{
+  position: relative;
+  display: block;
+  height: 100vh;
+  width: 100%;
+}
+
+.hm-banner-about{
+  background: url(/src/images/bg-banner-about.png) no-repeat;
+  background-position: center left;
+  background-size: 40vw;
+}
+
+.love{
+  display: inline-block;
+  height: auto;
+  margin: 0 5px;
+  width: 20px;
+}

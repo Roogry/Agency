@@ -1,0 +1,20 @@
+.hm-testimonials{
+    @extend .hm;
+    height: (388px + 66px)!important;
+    background: $bg-secondary;
+    padding-top: 66px;
+
+    &__title{
+        width: 100%;
+
+        h1, p{
+            width: 379px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        h1{
+            padding-top: 8px;
+        }
+    }
+}

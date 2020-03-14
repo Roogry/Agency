@@ -1,0 +1,22 @@
+.hm-banner{
+    @extend .hm;
+
+    &__left{
+        @include center-vertical(585px);
+    }
+
+    &__right{
+        @include center-vertical(635px);
+        right: 0;
+    }
+
+    &__img{
+        width: 100%;
+        display: block;
+    }
+
+    &__btn{
+        @include btn($r-sm);
+        margin-top: 36px;
+    }
+}

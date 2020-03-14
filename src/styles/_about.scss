@@ -1,0 +1,25 @@
+.hm-about{
+    @extend .hm;
+
+    &__lef{
+        @include center-vertical(287.41px);
+    }
+
+    &__right{
+        @include center-vertical(620px);
+        right: 0;
+    
+        h1, p{
+            margin-bottom: 36px;
+        }
+    
+        a{
+            @extend .a;
+            position: absolute;
+    
+            img{
+                margin-left: 4px;
+            }
+        }
+    }
+}

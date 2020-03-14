@@ -1,0 +1,61 @@
+.hm-subscribe{ 
+    position: relative;
+    display: block;
+    background: $bg-secondary;
+    padding-top: 58px;
+    padding-bottom: 58px;
+
+    &__container{
+        @extend .container-large;
+        width: 1000px;
+        padding: 40px 90px;
+        background-color: #ffffff;
+        border-radius: $r-md;
+    }
+
+    &__title{
+        @extend .text-regular;
+        font-weight: 600;
+        color: $grey;
+
+        strong{
+            color: $primary;
+        }
+    }
+
+    &__form{
+        margin-top: 16px;
+
+        &--container{
+            height: 50px;
+            display: flex;
+        }
+
+        &--input{
+            display: inline-block;
+            width: calc(100% - 175px)!important;
+            margin-right: 15px;
+            height: 100%;
+            outline: none;
+            background: $white;
+            border-radius: $r-md;
+            border: 1px solid #C4C4C4;
+            padding: 11px 30px;
+            font-size: $text-tiny;
+            font-weight: 600;
+            color: #646464;
+
+            @include placeholder(#c4c4c4);
+
+            &:focus{
+                border-radius: $r-md;
+                border: 1px solid $primary;
+            }
+        }
+
+        &--btn{
+            @include btn($r-md);
+            width: 160px;
+        }
+    }
+}

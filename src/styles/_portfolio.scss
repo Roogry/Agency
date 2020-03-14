@@ -1,0 +1,14 @@
+.hm-portfolio{
+    @extend .hm;
+    height: 1580px;
+    background: $bg-secondary;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .section-title{
+        width: 419px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

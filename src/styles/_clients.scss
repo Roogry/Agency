@@ -1,0 +1,19 @@
+.hm-clients{
+    @extend .hm;
+    height: 90px!important;
+    padding-top: 102px;
+    padding-bottom: 102px;
+
+    &__left{
+        @include center-vertical(400px);
+    }
+
+    &__right{
+        @include center-vertical(calc(100%-400px));
+        right: 0;
+    }
+
+    h1{
+        margin-bottom: 6px;
+    }
+}
