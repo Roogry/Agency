@@ -92,6 +92,7 @@
     }
 
     &__article{
+        @extend .a;
         align-items: center;
         align-self: flex-start;
         display: flex;
@@ -115,6 +116,11 @@
             overflow: hidden;
             text-overflow: ellipsis;
             margin-bottom: 1px;
+
+            &:hover{
+                margin-top: 0;
+                margin-left: 0;
+            }
         }
 
         &:hover &--title{

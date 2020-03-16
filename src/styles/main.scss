@@ -1,3 +1,4 @@
+@import '../../node_modules/swiper/css/swiper.css';
 @import "variables";
 @import "template";
 @import "header";
@@ -14,12 +15,6 @@
   display: block;
   height: 100vh;
   width: 100%;
-}
-
-.hm-banner-about{
-  background: url(/src/images/bg-banner-about.png) no-repeat;
-  background-position: center left;
-  background-size: 40vw;
 }
 
 .love{

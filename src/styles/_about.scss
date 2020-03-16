@@ -1,13 +1,21 @@
 .hm-about{
     @extend .hm;
+    height: 756px!important;
 
-    &__lef{
-        @include center-vertical(287.41px);
+    &__left{
+        @include center-vertical(calc(100% - 620px));
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: flex-start;
     }
 
     &__right{
         @include center-vertical(620px);
         right: 0;
+        padding-bottom: 150px;
     
         h1, p{
             margin-bottom: 36px;
@@ -15,11 +23,43 @@
     
         a{
             @extend .a;
-            position: absolute;
     
             img{
                 margin-left: 4px;
             }
         }
+    }
+
+    &__item{
+        width: 236.16px;
+        margin-top: 40px;
+        margin-right: 40px;
+        background-color: $bg-secondary;
+        box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.12);
+        border-radius: $r-md;
+        overflow: hidden;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+
+        p{
+            transition: 0.3s ease-in-out;
+        }
+
+        &--container{
+            padding: 40px 37px;
+        }
+
+        &:hover{
+            border: 2px solid $primary;
+
+            p{
+                color: $primary;
+            }
+        }
+    }
+
+    .item-system{
+        margin-top: 180px;
     }
 }

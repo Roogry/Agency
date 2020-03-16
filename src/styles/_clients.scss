@@ -9,11 +9,23 @@
     }
 
     &__right{
-        @include center-vertical(calc(100%-400px));
+        @include center-vertical(calc(100% - 400px));
         right: 0;
+    }
+    
+    &__next, &__prev{
+        @include swiper-nav(40px);
     }
 
     h1{
         margin-bottom: 6px;
+    }
+
+    .swiper-container{
+        width: 610px;
+    }
+
+    .swiper-slide{
+        height: 55px;
     }
 }

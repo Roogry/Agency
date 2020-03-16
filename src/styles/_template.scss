@@ -23,6 +23,18 @@ body {
   max-width: 1260px;
   margin: auto;
   position: relative;
+  height: 100%;
+}
+
+.decoration-item{
+  background-position: center left;
+  background-color: rgba(0,96,255,0.1);
+  height: 669px;
+  width: 669px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(100vh - 420px);
+  left: -80px;
 }
 
 @mixin center-vertical($width) {
@@ -62,6 +74,7 @@ body {
   }
 
   &__bold{
+    @extend .text-regular;
     color: #000000;
     font-weight: 600;
   }
@@ -93,9 +106,12 @@ body {
 
 .a {
   text-decoration: none;
+  transition: 0.3s ease-in-out;
 
   &:hover{
     color: $primary-hover;
+    margin-top: 2px;
+    margin-left: 1px;
   }
 }
 
@@ -112,4 +128,86 @@ body {
   &::-ms-input-placeholder {
     color: $color;
   }  
+}
+
+.icon{
+  width: 40%;
+  height: 40%;
+  background-size: 50% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease-in-out;
+
+  &-right{
+    background: url(/src/images/icon/ic-right.svg);
+  }
+
+  &-left{
+    background: url(/src/images/icon/ic-left.svg);
+  }
+
+  &:hover{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  }
+}
+
+
+.swiper-slide{
+  position: relative;
+
+  &__img{
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+}
+
+.swiper-button-next, .swiper-button-prev{
+  outline: none;
+}
+
+
+@mixin swiper-nav($size) {
+  height: $size;
+  width: $size;
+  background-color: #017bfe00;
+  border-radius: $r-sm;
+  transition: 0.3s ease-in-out;
+
+  &:after{
+    visibility: hidden;
+  }
+
+  &:hover{
+    background-color: $primary;
+
+    .icon{
+      filter: invert(127%) sepia(51%) saturate(0%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    }
+  }
+}
+
+@mixin swiper-nav-triangle($size) {
+  height: $size;
+  width: $size;
+  background-size: 60% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  transition: 0.3s ease-in-out;
+
+  &:after{
+    visibility: hidden;
+  }
+
+  &:hover{
+    //filter: invert(27%) sepia(51%) saturate(10%) hue-rotate(346deg) brightness(104%) contrast(97%);
+
+    .icon{
+      filter: invert(127%) sepia(51%) saturate(0%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    }
+  }
 }
