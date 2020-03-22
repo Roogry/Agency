@@ -17,6 +17,11 @@
             width: calc(80 * 1000px / 100);
             padding: 26px 45px;
         }
+        
+        @media only screen and (max-width: 640px) {
+            padding: 32px 32px;
+            border-radius: $r-sm;
+        }
     }
 
     &__title{
@@ -27,6 +32,10 @@
         strong{
             color: $primary;
         }
+
+        @media only screen and (max-width: 640px) {
+            text-align: center;
+        }
     }
 
     &__form{
@@ -35,6 +44,12 @@
         &--container{
             height: 50px;
             display: flex;
+
+            @media only screen and (max-width: 640px) {
+                flex-wrap: wrap;
+                height: unset;
+                align-content: center;
+            }
         }
 
         &--input{
@@ -57,11 +72,23 @@
                 border-radius: $r-md;
                 border: 1px solid $primary;
             }
+
+            
+            @media only screen and (max-width: 640px) {
+                width: 100%!important;
+                border-radius: $r-sm;
+            }
         }
 
         &--btn{
             @include btn($r-md);
             width: 160px;
+
+            @media only screen and (max-width: 640px) {
+                width: unset;
+                margin: 16px auto 0 auto;
+                border-radius: $r-sm;
+            }
         }
     }
 }

@@ -27,6 +27,11 @@
 
     &__next, &__prev{
         @include swiper-nav(50px);
+        
+        @media only screen and (max-width: 640px) {
+            width: 30px;
+            height: 30px;
+        }
     }
 
     &__swiper{
@@ -52,10 +57,15 @@
                     border-radius: $r-sm;
                     height: 70px;
                     width: 70px;
+
+                    
+                    @media only screen and (max-width: 640px) {
+                        height: 40px;
+                        width: 40px;
+                    }
                 }
 
                 &__text{
-
                     margin-left: 22px;
                     
                     .text-name{
@@ -64,9 +74,13 @@
                     }
 
                     .text-company{
-                        @extend .text-regular;
-                        font-size: $text-normal;
+                        @extend .text-regular__normal;
                         text-align: start;
+                        margin-bottom: 0;
+                    }
+
+                    @media only screen and (max-width: 640px) {
+                        margin-left: 16px;
                     }
                 }
             }
@@ -76,6 +90,11 @@
         @media only screen and (max-width: 1290px) {
             width: calc(100% - 200px);
         }
+        
+        @media only screen and (max-width: 640px) {
+            width: calc(100% - 100px);
+        }
+        
     }
 
 }

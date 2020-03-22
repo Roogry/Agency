@@ -17,10 +17,6 @@ body {
   display: block;
   font-family: "Rubix", sans-serif;
   overflow-y: scroll;
-
-  @media only screen and (max-width: 1060px){
-    width: 1000px;
-  }
 }
 
 .container-large {
@@ -43,6 +39,12 @@ body {
   position: absolute;
   top: calc(100vh - 420px);
   left: -80px;
+  
+  
+  @media only screen and (max-width: 1000px) {
+    height: 50vw;
+    width: 50vw;
+  }
 }
 
 @mixin center-vertical($width) {
@@ -56,12 +58,21 @@ body {
   font-size: $text-title;
   font-weight: 600;
   color: #000000;
+
+  @media only screen and (max-width: 640px) {
+    font-size: $text-title-sm;
+  }
+
 }
 
 .text-regular{
   font-size: $text-regular;
   line-height: 1.56;
   color: #3E3C3C;
+  
+  @media only screen and (max-width: 640px) {
+    font-size: $text-tiny;
+  }
 
   &__secondary{
     @extend .text-regular;
@@ -79,6 +90,15 @@ body {
     &:hover{
       color: $primary-hover;
     }
+  }
+
+  &__normal{
+    font-size: $text-normal;
+
+    @media only screen and (max-width: 640px) {
+      font-size: $text-tiny;
+    }
+
   }
 
   &__bold{

@@ -2,9 +2,9 @@ import Swiper from 'swiper';
 import './styles/main.scss';
 
 var swiperCLient = new Swiper('.hm-clients__swiper', {
-  slidesPerView: 3,
-  spaceBetween: 50,
-  centeredSlides: true,
+  slidesPerView: 2,
+  spaceBetween: 16,
+  centeredSlides: false,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -15,6 +15,12 @@ var swiperCLient = new Swiper('.hm-clients__swiper', {
       nextEl: '.hm-clients__next',
       prevEl: '.hm-clients__prev',
   },
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+  }
 });
 
 var swiperPortfolio = new Swiper('.hm-portfolio__swiper', {
