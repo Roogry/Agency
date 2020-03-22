@@ -17,6 +17,10 @@ body {
   display: block;
   font-family: "Rubix", sans-serif;
   overflow-y: scroll;
+
+  @media only screen and (max-width: 1060px){
+    width: 1000px;
+  }
 }
 
 .container-large {
@@ -24,6 +28,10 @@ body {
   margin: auto;
   position: relative;
   height: 100%;
+
+  @media only screen and (max-width: 1290px) {
+    max-width: 90%;
+  }
 }
 
 .decoration-item{
@@ -179,7 +187,7 @@ body {
   transition: 0.3s ease-in-out;
 
   &:after{
-    visibility: hidden;
+    display: none;
   }
 
   &:hover{

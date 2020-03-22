@@ -3,16 +3,44 @@
 
     &__left{
         @include center-vertical(485px);
+        
+
+        @media only screen and (max-width: 1065px) {
+            width: 60%!important;
+        }
+        
+        @media only screen and (max-width: 1000px) {
+            width: 80%!important;
+        }
+
+        @media only screen and (max-width: 600px) {
+            width: 100%!important;
+        }
     }
 
     &__right{
         @include center-vertical(635px);
         right: 0;
+
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            display: none;
+        }
+
+        @media only screen and (max-width: 1290px) {
+            width: 40%!important;
+        }
     }
 
     &__img{
         width: 100%;
         display: block;
+
+        
     }
 
     &__btn{

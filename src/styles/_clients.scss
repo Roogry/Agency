@@ -1,16 +1,22 @@
 .hm-clients{
     @extend .hm;
-    height: 90px!important;
-    padding-top: 102px;
-    padding-bottom: 102px;
+    height: 180px!important;
 
     &__left{
         @include center-vertical(400px);
+        
+        @media only screen and (max-width: 1060px) {
+            width: 300px;
+        }
     }
 
     &__right{
         @include center-vertical(calc(100% - 400px));
         right: 0;
+        
+        @media only screen and (max-width: 1060px) {
+            width: calc(100% - 300px);
+        }
     }
     
     &__next, &__prev{
@@ -19,13 +25,37 @@
 
     h1{
         margin-bottom: 6px;
+        
+        @media only screen and (max-width: 1060px) {
+            font-size: 34px;
+        }
     }
 
     .swiper-container{
         width: 610px;
+
+        @media only screen and (max-width: 1290px) {
+            width: 400px;
+        }
     }
 
     .swiper-slide{
         height: 55px;
+
+        
+        @media only screen and (max-width: 1290px) {
+            height: 30px;
+
+            img{
+                height: 30px;
+            }
+        }
+    }
+
+    
+    @media only screen and (max-width: 1060px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 120px!important;
     }
 }

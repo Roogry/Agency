@@ -32,6 +32,11 @@
             width: 400px;
             padding-right: 50px;
         }
+
+        
+        @media only screen and (max-width: 1290px) {
+            padding-top: 22px;
+        }
     }
 
     &__logo{

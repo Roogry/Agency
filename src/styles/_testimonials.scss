@@ -4,6 +4,12 @@
     background: $bg-secondary;
     padding-top: 66px;
 
+    
+    @media only screen and (max-width: 1290px) {
+        height: unset!important;
+        padding-bottom: 20px;
+    }
+
     &__title{
         width: 100%;
         margin-bottom: 56px;
@@ -64,6 +70,11 @@
                     }
                 }
             }
+        }
+
+        
+        @media only screen and (max-width: 1290px) {
+            width: calc(100% - 200px);
         }
     }
 

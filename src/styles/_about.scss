@@ -1,7 +1,7 @@
 .hm-about{
     @extend .hm;
     height: 756px!important;
-
+    
     &__left{
         @include center-vertical(calc(100% - 620px));
         height: 100%;
@@ -10,12 +10,29 @@
         display: flex;
         flex-flow: column wrap;
         align-content: flex-start;
+        
+        @media only screen and (max-width: 1290px) {
+            height: unset;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            position: unset;
+            top: unset;
+            transform: unset;
+            width: 100%!important;
+            height: 200px;
+        }
+        
+        @media only screen and (max-width: 1060px) {
+            width: 35%;
+        }
     }
 
     &__right{
         @include center-vertical(620px);
         right: 0;
         padding-bottom: 150px;
+        float: left;
     
         h1, p{
             margin-bottom: 36px;
@@ -27,6 +44,18 @@
             img{
                 margin-left: 4px;
             }
+        }
+
+        @media only screen and (max-width: 1290px) {
+            @include center-vertical(55%);
+            padding-bottom: unset;
+        }
+        
+        @media only screen and (max-width: 1000px) {
+            width: 100%!important;
+            position: unset;
+            top: unset;
+            transform: unset;
         }
     }
 
@@ -44,10 +73,25 @@
 
         p{
             transition: 0.3s ease-in-out;
+            @media only screen and (max-width: 1290px) {
+                float: left;
+            }
         }
 
         &--container{
             padding: 40px 37px;
+            
+            @media only screen and (max-width: 1290px) {
+                padding: 16px 32px;
+                display: flex;
+                  
+                &::after {
+                    content: "";
+                    clear: both;
+                    display: table;
+                }
+            }
+
         }
 
         &:hover{
@@ -57,9 +101,53 @@
                 color: $primary;
             }
         }
+
+        
+        @media only screen and (max-width: 1290px) {
+            width: 100%;
+            margin-top: 32px;
+            border-radius: $r-sm;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+
+            img{
+                float: left;
+                height: 50px;
+                margin: auto 0;
+            }
+
+            p{
+                text-align: center;
+                margin: auto 16px;
+            }
+        }
+
+        
+        @media only screen and (max-width: 1000px) {
+            width: 30%;
+            margin-right: 40px!important;
+        }
+
+        @media only screen and (max-width: 1060px) {
+            margin-right: unset;
+        }
     }
 
-    .item-system{
-        margin-top: 180px;
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+        
+    @media only screen and (min-width: 1290px) {
+        
+        .item-system{
+            margin-top: 180px;
+        }
+
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
     }
 }
