@@ -51,6 +51,10 @@
     &__address{
         @extend .text-regular__secondary;
         font-size: $text-normal;
+
+        @media only screen and (max-width: 640px) {
+            font-size: $text-tiny;
+        }
     }
 
     &__sosmed-wrapper{
@@ -94,6 +98,10 @@
     &__title{
         @extend .text-regular__bold;
         margin-bottom: 22px;
+
+        @media only screen and (max-width: 640px) {
+            margin-bottom: 16px;
+        }
     }
 
     &__article{
@@ -109,6 +117,12 @@
             height: 60px;
             width: 60px;
             margin-right: 16px;
+
+            
+            @media only screen and (max-width: 640px) {
+                height: 40px;
+                width: 40px;
+            }
         }
 
         &--title{
@@ -142,6 +156,15 @@
             font-size: $text-tiny;
             letter-spacing: 2px;
             color: #ffffff;
+
+            @media only screen and (max-width: 640px) {
+                letter-spacing: 1px;
+            }
+        }
+        
+        @media only screen and (max-width: 640px) {
+            text-align: center;
+            padding: 16px 0;
         }
     }
 }

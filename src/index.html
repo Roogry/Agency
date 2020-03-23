@@ -10,14 +10,24 @@
             <div class="header__logo">
                 <img src="/src/images/icon/ic-agency.png" alt="Agency Logo">
             </div>
-            <nav class="menu">
-                <a class="menu__item" href="#hm-banner">Beranda</a>
-                <a class="menu__item" href="#hm-about">About Us</a>
-                <a class="menu__item" href="#hm-portfolio">Portfolio</a>
-                <a class="menu__item" href="#hm-clients">Clients</a>
-                <a class="menu__item" href="#hm-testimonials">Testimonials</a>
-                
-                <a class="menu__item--btn" href="#hm-subscribe">Contact Us</a>
+            
+            <div class="header-mobile__btn" onclick="activeNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav id="menu" class="menu">
+                <div class="menu-container">
+                    <a class="menu__item" href="#hm-banner">Beranda</a>
+                    <a class="menu__item" href="#hm-about">About Us</a>
+                    <a class="menu__item" href="#hm-portfolio">Portfolio</a>
+                    <a class="menu__item" href="#hm-clients">Clients</a>
+                    <a class="menu__item" href="#hm-testimonials">Testimonials</a>
+                    
+                    <a class="menu__item menu__item--btn" href="#hm-subscribe">Contact Us</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -283,5 +293,14 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function activeNav(ele) {
+            var element = document.getElementById("menu");
+            element.classList.toggle("active");
+
+            ele.classList.toggle("active");       
+        }
+    </script>
 </body>
 </html>

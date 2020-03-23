@@ -18,6 +18,11 @@
             width: 379px;
             text-align: center;
             margin: 0 auto;
+
+            @media only screen and (max-width: 640px) {
+                width: 100%;
+            }
+
         }
 
         h1{

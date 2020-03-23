@@ -69,7 +69,6 @@
             @include placeholder(#c4c4c4);
 
             &:focus{
-                border-radius: $r-md;
                 border: 1px solid $primary;
             }
 
@@ -77,6 +76,7 @@
             @media only screen and (max-width: 640px) {
                 width: 100%!important;
                 border-radius: $r-sm;
+                padding: 11px 16px;
             }
         }
 
